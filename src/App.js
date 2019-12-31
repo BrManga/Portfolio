@@ -9,6 +9,7 @@ import {
 import M from "./components/M/M";
 import GlobalStyle from "./styles/Global";
 import Home from "./components/Home/Home";
+import Video from "./components/Video/Video";
 
 class App extends Component {
   state = {
@@ -42,6 +43,7 @@ class App extends Component {
                 {/* <Redirect to="/home" />
                  */}{" "}
                 <Route exact path="/" component={Home} />
+                <Route exact path="/video" component={Video}/>
               </>
             )}
           </Switch>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Col } from "react-bootstrap";
+import { Col,Row } from "react-bootstrap";
 import photo from "../../assets/profile_photo.jpeg";
 import html from "../../assets/webLogos/html.png";
 import css from "../../assets/webLogos/css.png";
@@ -15,9 +15,11 @@ import express from "../../assets/webLogos/express.png";
 import mongodb from "../../assets/webLogos/mongodb.png";
 import mongoose from "../../assets/webLogos/mongoose.png";
 import github from "../../assets/webLogos/github.png";
+import Video from "../Video/Video";
 
 function Home() {
   return (
+    <>
     <Wrap className="container">
       <RowWrap className="row">
         <Col sm={4} style={{ display: "flex", alignItems: "center" }}>
@@ -103,11 +105,15 @@ function Home() {
           </ProfileWrite>
         </Col>
       </RowWrap>
+      <Row>
+      <Video/></Row>
     </Wrap>
+    </>
   );
 }
 
 const Wrap = styled.div`
+width:100%;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 3s; /* Firefox < 16 */
   animation: fadein 4s;
@@ -122,6 +128,7 @@ const Wrap = styled.div`
   }
 `;
 const RowWrap = styled.div`
+width:100%;
   margin-top: 6rem;
   background-color: papayawhip;
   box-shadow: 10px 10px 5px grey;
