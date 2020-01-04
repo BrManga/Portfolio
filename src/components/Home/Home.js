@@ -151,6 +151,9 @@ const RowWrap = styled.div`
   @media (max-width: 1400px) {
     margin-right: 1rem !important;
   }
+  @media (max-width: 1100px) {
+    margin: 3rem !important;
+  }
   @media (max-width: 1000px) {
     margin: 1rem !important;
   }
@@ -188,7 +191,7 @@ const Sliding = styled.span`
   font-size: 1.8rem;
   font-family: "Titillium Web", sans-serif;
   font-weight: bold;
-  @media (max-width: 990px) {
+  @media (max-width: 1500px) {
     display: block;
     text-align: center;
     align-self: center;
