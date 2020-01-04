@@ -25,11 +25,18 @@ const Wrapper = styled.div`
     background: #296180;
     display: block;
     position: relative;
-    width: 3.5rem;
+    width: 2.5rem;
     height: 0.4rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.4rem;
     transition: all ease-in-out 0.2s;
+    @media only screen and (max-width: 500px) {
+    width:2rem;
+    margin-bottom: 0.3rem;
+    height: 0.2rem;
+
+    }
   }
+
 
   .open span:nth-child(2) {
     opacity: 0;

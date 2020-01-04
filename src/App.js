@@ -10,6 +10,7 @@ import M from "./components/M/M";
 import GlobalStyle from "./styles/Global";
 import Home from "./components/Home/Home";
 import Video from "./components/Video/Video";
+import Projects from "./components/Projects/Projects";
 
 class App extends Component {
   state = {
@@ -29,7 +30,6 @@ class App extends Component {
     return (
       <>
         <Router>
-          <GlobalStyle />
 
           <Switch>
             {this.state.transition ? (
@@ -40,10 +40,11 @@ class App extends Component {
                   navbarState={this.state.navbarOpen}
                   handleNavbar={this.handleNavbar}
                 />
-                {/* <Redirect to="/home" />
-                 */}{" "}
-                <Route exact path="/" component={Home} />
-                <Route exact path="/video" component={Video}/>
+               <Redirect to="/home" />
+                
+                <Route exact path="/home" component={Home} />
+                <Route exact path="/projects" component={Projects} />
+             
               </>
             )}
           </Switch>

@@ -10,6 +10,10 @@ const Brand = () => {
 export default Brand;
 
 const Image = styled.img`
-  height: 85%;
+  height: 65%;
   margin: auto 0;
+  @media only screen and (max-width: 500px) {
+    height: 55%;
+    
+  }
 `;

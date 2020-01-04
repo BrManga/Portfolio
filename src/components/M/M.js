@@ -17,6 +17,8 @@ const FullBlack = styled.div`
   opacity: 1;
   animation-delay: 1s;
   animation: fadeout 2.2s;
+  margin:0;
+  padding:0;
 
   @keyframes fadeout {
     from {

@@ -67,7 +67,10 @@ const NavLinks = styled.ul`
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    @media only screen and (max-width: 500px) {
+      font-size: 0.8rem;
 
+    }
     &:hover {
       color: #296180;
       border-bottom: 2px solid white;

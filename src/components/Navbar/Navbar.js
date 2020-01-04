@@ -54,7 +54,9 @@ const NavBar = styled(animated.nav)`
   left: 0;
   background: #2d3436;
   z-index: 11;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  @media only screen and (max-width: 1100px) {
+    font-size: 0.9rem;}
 `;
 
 const FlexContainer = styled.div`
@@ -63,7 +65,7 @@ const FlexContainer = styled.div`
   margin: auto;
   padding: 0 2rem;
   justify-content: space-between;
-  height: 5rem;
+  height: 4rem;
 `;
 
 const NavLinks = styled(animated.ul)`

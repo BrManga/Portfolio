@@ -8,7 +8,7 @@ function Video() {
         <video autoPlay muted loop>
             <source src={video} type="video/mp4"/>
         </video>
-        <h2>MANGA</h2>
+        <h2>manga</h2>
             
         </div>
     )
