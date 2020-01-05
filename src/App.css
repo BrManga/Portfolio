@@ -57,25 +57,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #327599;
+  align-items: center;
+  /* background-color: #327599; */
+  background-image: url("./assets/bg-aday.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
-  box-shadow: 15px 15px 10px rgb(109, 116, 131);
-  border-radius: 1px 50px;
-  color: rgb(207, 199, 199);
+/*   box-shadow: 15px 15px 10px rgb(109, 116, 131); */
+  /* border-radius: 1px 50px; */
+  color: rgb(54, 51, 51);
   font-weight: bold;
  max-width: var(--contentWidth);
 }
 
 .title {
   font-size: 1.5em;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.6), 0px 8px 13px rgba(0, 0, 0, 0.6),
-    0px 18px 23px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 2px 1px rgba(128, 174, 206, 0.6), 0px 2px 4px rgba(70, 88, 114, 0.6),
+    0px 18px 23px rgba(70, 100, 156, 0.6);
 }
 
 .description {
   font-size: 1.1em;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.6), 0px 8px 13px rgba(0, 0, 0, 0.6),
-    0px 18px 23px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+    background-color: rgba(205, 221, 221, 0.3);
+    border-radius: 5px 5px;
 }
 .description > ul > li {
   list-style-type: square;

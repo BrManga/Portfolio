@@ -178,20 +178,20 @@ const ProfilePhoto = styled.img`
     height: 130px;
   }
 
-  ${"" /*   -webkit-filter: grayscale(100%);
+ -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 
   &:hover {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
-  } */}
+  }
 `;
 const Sliding = styled.span`
   display: none;
   font-size: 1.8rem;
   font-family: "Titillium Web", sans-serif;
   font-weight: bold;
-  @media (max-width: 1500px) {
+  @media (max-width: 1100px) {
     display: block;
     text-align: center;
     align-self: center;

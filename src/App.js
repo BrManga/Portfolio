@@ -32,15 +32,15 @@ class App extends Component {
         <Router>
 
           <Switch>
-            {/* {this.state.transition ? (
+            {this.state.transition ? (
               <Route exact path="/" component={M} />
-            ) :  */}(
+            ) : (
               <>
                 <Navbar
                   navbarState={this.state.navbarOpen}
                   handleNavbar={this.handleNavbar}
                 />
-               <Redirect to="/projects" />
+               <Redirect to="/home" />
                 
                 <Route exact path="/home" component={Home} />
                 <Route exact path="/projects" component={Projects} />
