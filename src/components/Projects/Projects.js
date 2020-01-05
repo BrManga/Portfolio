@@ -4,11 +4,12 @@ import { Col, Card, Button } from "react-bootstrap";
 import img from "../../assets/Projects/resorthotel.png";
 import img1 from "../../assets/Projects/zalando.png";
 
-import Project from "./Project";
+import ProjectLeft from "./ProjectLeft";
+import ProjectRight from "./ProjectRight";
 
 function Projects() {
   const state = [
-    {
+    [{
       img: img,
       pageTitle: "Luxurious Rooms",
       pageDescription:
@@ -28,8 +29,8 @@ function Projects() {
         "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
       pageURL: "https://best-beach-resort-hotel.netlify.com/",
       codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    },
-    {
+    }],
+    [{
       img: img,
       pageTitle: "Luxurious Rooms",
       pageDescription:
@@ -49,9 +50,9 @@ function Projects() {
         "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
       pageURL: "https://best-beach-resort-hotel.netlify.com/",
       codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    }
+    }]
   ];
-  const projects = state.map(project => <Project {...project} />);
+  const projects = state.map(project => <><ProjectLeft {...project[0]} /> <ProjectRight {...project[1]} /></>);
   return <Wrap className="container">{projects}</Wrap>;
 }
 
