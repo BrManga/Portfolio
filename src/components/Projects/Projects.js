@@ -1,58 +1,66 @@
 import React from "react";
 import styled from "styled-components";
 import { Col, Card, Button } from "react-bootstrap";
-import img from "../../assets/Projects/resorthotel.png";
-import img1 from "../../assets/Projects/zalando.png";
+import img from "../../assets/Projects/resorthotelsm.png";
+import img1 from "../../assets/Projects/zalandosm.png";
 
 import ProjectLeft from "./ProjectLeft";
 import ProjectRight from "./ProjectRight";
 
 function Projects() {
   const state = [
-    [{
-      img: img,
-      pageTitle: "Luxurious Rooms",
-      pageDescription:
-        "A hotel reservation project made for the learning purposes",
-      technologyTitle: "Technologies Used",
-      technologyDescription: "React, Redux, Bootstrap bla bla bla bla bla",
-      pageURL: "https://best-beach-resort-hotel.netlify.com/",
-      codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    },
-    {
-      img: img1,
-      pageTitle: "Zalando",
-      pageDescription:
-        "An e-commerce project not done by me, An e-commerce project not done by me",
-      technologyTitle: "Technologies Used",
-      technologyDescription:
-        "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
-      pageURL: "https://best-beach-resort-hotel.netlify.com/",
-      codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    }],
-    [{
-      img: img,
-      pageTitle: "Luxurious Rooms",
-      pageDescription:
-        "A hotel reservation project made for the learning purposes",
-      technologyTitle: "Technologies Used",
-      technologyDescription: "React, Redux, Bootstrap bla bla bla bla bla",
-      pageURL: "https://best-beach-resort-hotel.netlify.com/",
-      codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    },
-    {
-      img: img1,
-      pageTitle: "Zalando",
-      pageDescription:
-        "An e-commerce project not done by me, An e-commerce project not done by me",
-      technologyTitle: "Technologies Used",
-      technologyDescription:
-        "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
-      pageURL: "https://best-beach-resort-hotel.netlify.com/",
-      codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
-    }]
+    [
+      {
+        img: img,
+        pageTitle: "Luxurious Rooms",
+        pageDescription:
+          "A hotel reservation project made for the learning purposes",
+        technologyTitle: "Technologies Used",
+        technologyDescription: "React, Redux, Bootstrap bla bla bla bla bla",
+        pageURL: "https://best-beach-resort-hotel.netlify.com/",
+        codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
+      },
+      {
+        img: img1,
+        pageTitle: "Zalando",
+        pageDescription:
+          "An e-commerce project not done by me, An e-commerce project not done by me",
+        technologyTitle: "Technologies Used",
+        technologyDescription:
+          "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
+        pageURL: "https://best-beach-resort-hotel.netlify.com/",
+        codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
+      }
+    ],
+    [
+      {
+        img: img,
+        pageTitle: "Luxurious Rooms",
+        pageDescription:
+          "A hotel reservation project made for the learning purposes",
+        technologyTitle: "Technologies Used",
+        technologyDescription: "React, Redux, Bootstrap bla bla bla bla bla",
+        pageURL: "https://best-beach-resort-hotel.netlify.com/",
+        codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
+      },
+      {
+        img: img1,
+        pageTitle: "Zalando",
+        pageDescription:
+          "An e-commerce project not done by me, An e-commerce project not done by me",
+        technologyTitle: "Technologies Used",
+        technologyDescription:
+          "React, Redux, Bootstrap bla bla bla bla bla, React, Redux, Bootstrap bla bla bla bla bla",
+        pageURL: "https://best-beach-resort-hotel.netlify.com/",
+        codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
+      }
+    ]
   ];
-  const projects = state.map(project => <><ProjectLeft {...project[0]} /> <ProjectRight {...project[1]} /></>);
+  const projects = state.map(project => (
+    <>
+      <ProjectLeft {...project[0]} /> <ProjectRight {...project[1]} />
+    </>
+  ));
   return <Wrap className="container">{projects}</Wrap>;
 }
 
