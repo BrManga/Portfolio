@@ -17,11 +17,11 @@ function ProjectRight(props) {
   return (
     <RowWrap style={{ display: "flex" }} className="backgroundyr">
     <Col className="projectDescription">
-      <h2 className="text-center">
+      <h2 className="text-center" style={{ fontSize: "1rem" }}>
         <strong>{pageTitle}</strong>{" "}
       </h2>
       <p style={{ fontSize: "1rem" }}>{pageDescription}</p>
-      <h2 className="mt-5 text-center">
+      <h2 className="mt-5 text-center" style={{ fontSize: "1rem" }}>
         <strong>{technologyTitle}</strong>{" "}
       </h2>
       <p style={{ fontSize: "1rem" }}>{technologyDescription} </p>
@@ -31,7 +31,7 @@ function ProjectRight(props) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        marginRight: "2rem",
+        marginRight: "1rem",
         flexDirection: "column"
       }}
       sm={1}

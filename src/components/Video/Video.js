@@ -5,10 +5,10 @@ import "./Video.css"
 function Video() {
     return (
         <div className="banner">
-        <video autoPlay muted loop>
+        <video autoPlay muted loop className="video">
             <source src={video} type="video/mp4"/>
         </video>
-        <h2>manga</h2>
+        <h2 className="contactVideo">Contact</h2>
             
         </div>
     )

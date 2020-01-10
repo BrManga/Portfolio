@@ -16,7 +16,7 @@ function ProjectLeft(props) {
   } = props;
   return (
     <RowWrap style={{ display: "flex" }} className="backgroundy">
-      <Col sm={6} style={{ margin: "0rem 2rem", alignSelf: "center" }}>
+      <Col sm={6} style={{  alignSelf: "center" }}>
         <ImageCard>
           <Card>
             <Card.Img variant="top" src={img} style={{ height: "250px" }} />
@@ -28,7 +28,7 @@ function ProjectLeft(props) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginRight: "2rem",
+          marginLeft: "1rem",
           flexDirection: "column"
         }}
         sm={1}
@@ -57,11 +57,11 @@ function ProjectLeft(props) {
         </div>
       </Col>
       <Col className="projectDescription">
-        <h2 className="text-center">
+        <h2 className="text-center" style={{ fontSize: "1rem" }}>
           <strong>{pageTitle}</strong>{" "}
         </h2>
         <p style={{ fontSize: "1rem" }}>{pageDescription}</p>
-        <h2 className="mt-5 text-center">
+        <h2 className="mt-5 text-center" style={{ fontSize: "1rem" }}>
           <strong>{technologyTitle}</strong>{" "}
         </h2>
         <p style={{ fontSize: "1rem" }}>{technologyDescription} </p>
