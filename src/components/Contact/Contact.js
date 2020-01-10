@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import xing from "../../assets/social-media/xing.svg";
 import linkedin from "../../assets/social-media/linkedin.svg";
 import github from "../../assets/social-media/github.svg";
@@ -13,13 +14,31 @@ function Contact() {
         <div></div>
         <div className="social-media">
           <div>
-            <img src={github} alt="github" />
+            <a
+              href="https://github.com/BrManga"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="github" />
+            </a>
           </div>
           <div>
-            <img src={xing} alt="xing" />
+            <a
+              href="https://www.xing.com/profile/Manga_ZBora/cv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={xing} alt="xing" />
+            </a>
           </div>
           <div>
-            <img src={linkedin} alt="linkedin" />
+            <a
+              href="https://www.linkedin.com/in/z-bora-m-700094175/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="linkedin" />
+            </a>
           </div>
         </div>
         <div></div>
@@ -59,9 +78,27 @@ function Contact() {
           </button>
         </form>
         <div className="social-media-down">
+          <a
+            href="https://github.com/BrManga"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github} alt="github" />
+          </a>
+          <a
+            href="https://www.xing.com/profile/Manga_ZBora/cv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={xing} alt="xing" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/z-bora-m-700094175/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={linkedin} alt="linkedin" />
+          </a>
         </div>
       </div>
     </div>
