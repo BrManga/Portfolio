@@ -178,7 +178,7 @@ const ProfilePhoto = styled.img`
     height: 130px;
   }
 
- -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 
   &:hover {

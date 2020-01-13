@@ -1,0 +1,151 @@
+.wrapProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 100%;
+  animation: fadein 4s;
+  animation-fill-mode: forwards;
+  margin-top: 5rem;
+  /* background-image: url("../../assets/contact_deneme.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backgroundLeft {
+  position: relative;
+  padding: 1rem !important;
+  display: flex;
+  margin: 2rem;
+}
+.backgroundLeft:after {
+  content: "";
+  background: url("../../assets/project_left.png") no-repeat;
+
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  border-radius: 30px 40px;
+  box-shadow: 2px 4px 4px 3px rgb(229, 226, 226);
+}
+
+.projectImageCol {
+  align-self: center;
+}
+
+.projectCardImage {
+  height: 280px;
+}
+
+.projectdescriptionCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  div {
+    border-radius: 10px;
+    padding-bottom: 1rem;
+  }
+}
+
+.buttonProject {
+  width: 100px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  color: white !important;
+  background-color: #2d3436;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background-color: white;
+    box-shadow: 0px 15px 20px rgba(76, 78, 79, 0.9);
+    color: #2d3436 !important;
+    transform: translateY(-7px);
+  }
+}
+
+.imageCard {
+    transition: all 0.3s ease 0s;
+  position: relative;
+  min-width: 250px;
+  border: 5px solid transparent;
+  &:hover {
+    animation: animate 2s linear forwards;
+    box-shadow: 10px 15px 20px rgba(76, 78, 79, 0.9);
+    transform: translateY(-7px);
+}
+  @keyframes animate {
+      0% {
+      border-top-color: #7d807f;
+    }
+    35% {
+        border-top-color: #7d807f;
+      border-right-color: #7d807f;
+    }
+    65% {
+        border-top-color: #7d807f;
+      border-bottom-color: #7d807f;
+      border-right-color: #7d807f;
+    }
+    100% {
+        border-color: #7d807f;
+    }
+  }
+}
+.backgroundRight {
+  position: relative;
+  padding: 1rem !important;
+  display: flex;
+  margin: 2rem;
+}
+.backgroundRight:after {
+    content: "";
+  background: url("../../assets/project_right.png") no-repeat;
+  
+  background-size: cover;
+  /* background: url("../../assets/pngfuel1r.png") no-repeat; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  border-radius: 30px 40px;
+  box-shadow: -2px 4px 4px 3px rgb(229, 226, 226);
+}
+
+.projectDescription {
+  margin: auto 2rem;
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

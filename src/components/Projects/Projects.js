@@ -1,11 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-import { Col, Card, Button } from "react-bootstrap";
 import img from "../../assets/Projects/resorthotelsm.png";
 import img1 from "../../assets/Projects/weatherapp.png";
-
 import ProjectLeft from "./ProjectLeft";
 import ProjectRight from "./ProjectRight";
+import "./projects.style.scss"
 
 function Projects() {
   const state = [
@@ -60,26 +58,9 @@ function Projects() {
       <ProjectLeft {...project[0]} /> <ProjectRight {...project[1]} />
     </>
   ));
-  return <Wrap className="container">{projects}</Wrap>;
+  return <div className="container wrapProjects">{projects}</div>;
 }
 
-const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 100%;
-  animation: fadein 4s;
-  animation-fill-mode: forwards;
-  margin-top: 5rem;
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-`;
+
 
 export default Projects;

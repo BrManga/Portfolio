@@ -6,7 +6,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f6f6f3;
+  /*   position: fixed; */
   /*  background-image: url("./assets/sea1.jpeg");
   background-size: cover;
  */
@@ -41,6 +41,10 @@ body {
   animation: fadein 2s;
   animation-fill-mode: forwards;
   --contentHeight: 100%;
+  background-image: url(./assets/contact_deneme.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @keyframes fadein {
@@ -58,9 +62,10 @@ body {
   justify-content: center;
   align-items: center;
   /* background-color: #327599; */
-  background-image: url("./assets/bg-adaysm.png");
+  /*  background-image: url("./assets/bg-adaysm.png");
   background-repeat: no-repeat;
   background-size: cover;
+  */
   box-sizing: border-box;
   /*   box-shadow: 15px 15px 10px rgb(109, 116, 131); */
   /* border-radius: 1px 50px; */
@@ -124,45 +129,4 @@ body {
     background-image: none;
     background-color: rgb(238, 238, 246);
   }
-}
-
-/* PROJECTS COMPONENT */
-.backgroundy {
-  position: relative;
-  padding: 1rem !important;
-}
-.backgroundy:after {
-  content: "";
-  background: url("./assets/pngfuel1.png") no-repeat;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.9;
-  border-radius: 30px 40px;
-  box-shadow: 2px 4px 4px 3px rgb(229, 226, 226);
-}
-.backgroundyr {
-  position: relative;
-  padding: 1rem !important;
-}
-.backgroundyr:after {
-  content: "";
-  background: url("./assets/pngfuel1r.png") no-repeat;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.9;
-  border-radius: 30px 40px;
-  box-shadow: -2px 4px 4px 3px rgb(229, 226, 226);
-}
-.projectDescription {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 30px 40px;
-  margin: 0 2rem;
 }
