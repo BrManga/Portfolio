@@ -41,7 +41,7 @@ class App extends Component {
                 navbarState={this.state.navbarOpen}
                 handleNavbar={this.handleNavbar}
               />
-             {/*  <Redirect to="/home" /> */}
+              {/* <Redirect to="/home" />  */}
 
               <Route exact path="/home" component={Home} />
               <Route exact path="/projects" component={Projects} />

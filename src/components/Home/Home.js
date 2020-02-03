@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { Col, Row } from "react-bootstrap";
+import { Col} from "react-bootstrap";
 import useTypewriter from "react-typewriter-hook";
 import photo from "../../assets/profile_photo.jpeg";
 import html from "../../assets/webLogos/html.png";
@@ -18,6 +18,7 @@ import mongoose from "../../assets/webLogos/mongoose.png";
 import github from "../../assets/webLogos/github.png";
 
 const MagicOcean = [
+  "Zafer Bora Manga",
   "up to date",
   "problem solver",
   "easy learner",
@@ -40,106 +41,109 @@ function Home() {
   }, [magicName]);
   return (
     <div className="container-fluid wrap">
-      <RowWrap className="row">
-        <Col sm={12} lg={5} className="photoWrap">
-          <ProfilePhoto src={photo} alt="Profile Photo" />
+      <Myname> Zafer Bora Manga</Myname>
+      <div>
+        <RowWrap className="row">
+          <Col sm={12} lg={5} className="photoWrap">
+            <ProfilePhoto src={photo} alt="Profile Photo" />
 
-          <Sliding>
-            <p className="cursor">{name}</p>
-          </Sliding>
-        </Col>
-        <Col lg={7} sm={12} className="profileInfoWrap">
-          <div>
-            <ProfileWrite className="text-center">
-              <strong className="title">
-                A lifelong learning web developer, father of two children...{" "}
-              </strong>{" "}
-            </ProfileWrite>
-            <ProfileWrite font={"oblique"} className="description">
-              Principles are sacred. Some of most important ones for me...
-              <ul>
-                <li>Balance in life</li>
-                <li>Never stop to learning </li>
-                <li>Character is more important than reputation</li>
-                <li>Never give up </li>
-              </ul>
-            </ProfileWrite>
-          </div>
-          <Hr />
-          <ProfileWrite>
+            <Sliding>
+              <p className="cursor">{name}</p>
+            </Sliding>
+          </Col>
+          <Col lg={7} sm={12} className="profileInfoWrap">
             <div>
-              <p className="text-center">
+              <ProfileWrite className="text-center">
                 <strong className="title">
-                  As a web developer what i learned, so far...{" "}
-                </strong>
-              </p>
-
-              <table className="mt-1 description">
-                <tr>
-                  <td>- HTML</td>
-                  <td>
-                    <Logos src={html} alt="HTML Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- CSS(Bootstrap, SASS)</td>
-                  <td>
-                    <Logos src={css} alt="CSS Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={bootstrap} alt="Bootstrap Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={sass} alt="SASS Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- JavaScript(jQuery)</td>
-                  <td>
-                    <Logos src={js} alt="JS Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={jquery} alt="JQUERY Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- React (Redux)</td>
-                  <td>
-                    <Logos src={react} alt="REACT Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={redux} alt="REDUX Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- Node.js (Express)</td>
-                  <td>
-                    <Logos src={nodejs} alt="NODEJS Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={express} alt="EXPRESS Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- MongoDB(Mongoose)</td>
-                  <td>
-                    <Logos src={mongodb} alt="MONGODB Logo"></Logos>
-                  </td>
-                  <td>
-                    <Logos src={mongoose} alt="MONGOOSE Logo"></Logos>
-                  </td>
-                </tr>
-                <tr>
-                  <td>- Github</td>
-                  <td>
-                    <Logos src={github} alt="GITHUB Logo"></Logos>
-                  </td>
-                </tr>
-              </table>
+                  A lifelong learning web developer, father of two children...{" "}
+                </strong>{" "}
+              </ProfileWrite>
+              <ProfileWrite font={"oblique"} className="description">
+                Principles are sacred. Some of most important ones for me...
+                <ul>
+                  <li>Balance in life</li>
+                  <li>Never stop to learning </li>
+                  <li>Character is more important than reputation</li>
+                  <li>Never give up </li>
+                </ul>
+              </ProfileWrite>
             </div>
-          </ProfileWrite>
-        </Col>
-      </RowWrap>
+            <Hr />
+            <ProfileWrite>
+              <div>
+                <p className="text-center">
+                  <strong className="title">
+                    As a web developer what i learned, so far...{" "}
+                  </strong>
+                </p>
+
+                <table className="mt-1 description">
+                  <tr>
+                    <td>- HTML</td>
+                    <td>
+                      <Logos src={html} alt="HTML Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- CSS (Bootstrap, SASS)</td>
+                    <td>
+                      <Logos src={css} alt="CSS Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={bootstrap} alt="Bootstrap Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={sass} alt="SASS Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- JavaScript (jQuery)</td>
+                    <td>
+                      <Logos src={js} alt="JS Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={jquery} alt="JQUERY Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- React (Redux)</td>
+                    <td>
+                      <Logos src={react} alt="REACT Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={redux} alt="REDUX Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- Node.js (Express)</td>
+                    <td>
+                      <Logos src={nodejs} alt="NODEJS Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={express} alt="EXPRESS Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- MongoDB (Mongoose)</td>
+                    <td>
+                      <Logos src={mongodb} alt="MONGODB Logo"></Logos>
+                    </td>
+                    <td>
+                      <Logos src={mongoose} alt="MONGOOSE Logo"></Logos>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>- Github</td>
+                    <td>
+                      <Logos src={github} alt="GITHUB Logo"></Logos>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </ProfileWrite>
+          </Col>
+        </RowWrap>
+      </div>
     </div>
   );
 }
@@ -166,20 +170,17 @@ const ProfilePhoto = styled.img`
   max-width: 100%;
   height: auto;
   width: auto;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 15px 10px 14px #748a8f;
   border-radius: 50px 1px;
   transition: filter 0.5s ease-in-out;
   @media (max-width: 1000px) {
     height: 300px;
-    border-radius: 0;
+    
     margin-bottom: 1rem;
   }
   @media (max-width: 500px) {
     height: 130px;
   }
-
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
 
   &:hover {
     -webkit-filter: grayscale(0%);
@@ -234,6 +235,14 @@ const Hr = styled.hr`
     @media (max-width: 1100px) {
       font-size: 1.2em;
     }
+  }
+`;
+const Myname = styled.p`
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  padding: 2rem;
+  @media (max-width: 1100px) {
+    display: none;
   }
 `;
 export default Home;

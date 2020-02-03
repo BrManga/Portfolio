@@ -40,7 +40,14 @@ function ProjectRight(props) {
       <Col sm={6} className="projectImageCol">
         <div className="imageCard">
           <Card>
-            <Card.Img variant="top" src={img} className="projectCardImage" />
+            <a
+              href={pageURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              alt= {pageTitle}
+            >
+              <Card.Img variant="top" src={img} className="projectCardImage" />
+            </a>
           </Card>
         </div>
       </Col>{" "}

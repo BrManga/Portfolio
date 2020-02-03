@@ -44,6 +44,7 @@ const CollapseMenu = props => {
 export default CollapseMenu;
 
 const CollapseWrapper = styled(animated.div)`
+  width: 100%;
   background: #2d3436;
   position: fixed;
   top: 4.5rem;
@@ -69,7 +70,6 @@ const NavLinks = styled.ul`
     cursor: pointer;
     @media only screen and (max-width: 500px) {
       font-size: 0.8rem;
-
     }
     &:hover {
       color: #296180;
