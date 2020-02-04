@@ -33,7 +33,6 @@ const Wrapper = styled.div`
     width:2rem;
     margin-bottom: 0.3rem;
     height: 0.2rem;
-
     }
   }
 

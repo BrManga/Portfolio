@@ -23,7 +23,7 @@ const Navbar = props => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          <Brand />
+          <Brand></Brand>
           <NavLinks style={linkAnimation}>
             <Link to="/home">Home</Link>
             <Link to="/projects">Projects</Link>
@@ -53,6 +53,7 @@ const NavBar = styled(animated.nav)`
   top: 0;
   left: 0;
   background: #2d3436;
+${"" /*   opacity:0.5; ${'' /* SILLLLLLLLLLLLLLLLLLLL */} */}
   z-index: 11;
   font-size: 1.2rem;
   @media only screen and (max-width: 1100px) {

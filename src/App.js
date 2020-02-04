@@ -7,9 +7,7 @@ import {
   Redirect
 } from "react-router-dom";
 import M from "./components/M/M";
-import GlobalStyle from "./styles/Global";
 import Home from "./components/Home/Home";
-import Video from "./components/Video/Video";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 
@@ -32,22 +30,20 @@ class App extends Component {
       <>
         <Router>
           <Switch>
-            {/*  {this.state.transition ? (
-              <Route exact path="/" component={M} />
-            ) :  */}
-            (
-            <>
+              {this.state.transition ? 
+              (<Route exact path="/" component={M} />) :  
+            ( <>
               <Navbar
                 navbarState={this.state.navbarOpen}
                 handleNavbar={this.handleNavbar}
               />
-              {/* <Redirect to="/home" />  */}
+               
 
               <Route exact path="/home" component={Home} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
-            </>
-            )
+              <Redirect to="/home" /> 
+            </>)}
           </Switch>
         </Router>
       </>

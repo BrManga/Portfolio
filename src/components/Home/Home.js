@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { Col} from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import useTypewriter from "react-typewriter-hook";
-import photo from "../../assets/profile_photo.jpeg";
 import html from "../../assets/webLogos/html.png";
 import css from "../../assets/webLogos/css.png";
 import bootstrap from "../../assets/webLogos/bootstrap.png";
@@ -16,6 +15,8 @@ import express from "../../assets/webLogos/express.png";
 import mongodb from "../../assets/webLogos/mongodb.png";
 import mongoose from "../../assets/webLogos/mongoose.png";
 import github from "../../assets/webLogos/github.png";
+import "./home.styles.scss";
+import { Animated } from "react-animated-css";
 
 const MagicOcean = [
   "Zafer Bora Manga",
@@ -40,26 +41,30 @@ function Home() {
     };
   }, [magicName]);
   return (
-    <div className="container-fluid wrap">
-      <Myname> Zafer Bora Manga</Myname>
+    <div className="wrap">
+      <Animated animationIn="shake" animationInDelay={2000} isVisible={true}>
+        <p className="myname"> Zafer Bora Manga</p>
+      </Animated>
       <div>
-        <RowWrap className="row">
+        <div className="row rowWrap">
           <Col sm={12} lg={5} className="photoWrap">
-            <ProfilePhoto src={photo} alt="Profile Photo" />
-
-            <Sliding>
+            <div className="profilePhoto" />
+            <span className="sliding">
               <p className="cursor">{name}</p>
-            </Sliding>
+            </span>
           </Col>
           <Col lg={7} sm={12} className="profileInfoWrap">
-            <div>
-              <ProfileWrite className="text-center">
-                <strong className="title">
-                  A lifelong learning web developer, father of two children...{" "}
+            <div className="profileInfoWrapDiv">
+              <ProfileWrite className="text-center my-3">
+                <strong className="description titleFather">
+                  A lifelong learning web developer, <br />
+                  father of two children...{" "}
                 </strong>{" "}
               </ProfileWrite>
-              <ProfileWrite font={"oblique"} className="description">
-                Principles are sacred. Some of most important ones for me...
+              <ProfileWrite font={"oblique"} className="description ">
+                <span className="titleOther">
+                  Principles are sacred. Some of most important ones for me...
+                </span>
                 <ul>
                   <li>Balance in life</li>
                   <li>Never stop to learning </li>
@@ -68,181 +73,199 @@ function Home() {
                 </ul>
               </ProfileWrite>
             </div>
-            <Hr />
+            <hr className="stars" />
             <ProfileWrite>
-              <div>
-                <p className="text-center">
-                  <strong className="title">
-                    As a web developer what i learned, so far...{" "}
-                  </strong>
+              <div className="description">
+                <p className="text-center titleOther">
+                  <strong>As a web developer what i learned, so far... </strong>
                 </p>
 
-                <table className="mt-1 description">
+                <table className="mt-1 description bigSc ">
                   <tr>
-                    <td>- HTML</td>
+                    <td>• HTML</td>
                     <td>
-                      <Logos src={html} alt="HTML Logo"></Logos>
+                      <img className="logos" src={html} alt="HTML Logo"></img>
                     </td>
                   </tr>
                   <tr>
-                    <td>- CSS (Bootstrap, SASS)</td>
+                    <td>• CSS (Bootstrap, SASS)</td>
                     <td>
-                      <Logos src={css} alt="CSS Logo"></Logos>
+                      <img className="logos" src={css} alt="CSS Logo"></img>
                     </td>
                     <td>
-                      <Logos src={bootstrap} alt="Bootstrap Logo"></Logos>
+                      <img
+                        className="logos"
+                        src={bootstrap}
+                        alt="Bootstrap Logo"
+                      ></img>
                     </td>
                     <td>
-                      <Logos src={sass} alt="SASS Logo"></Logos>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>- JavaScript (jQuery)</td>
-                    <td>
-                      <Logos src={js} alt="JS Logo"></Logos>
-                    </td>
-                    <td>
-                      <Logos src={jquery} alt="JQUERY Logo"></Logos>
+                      <img className="logos" src={sass} alt="SASS Logo"></img>
                     </td>
                   </tr>
                   <tr>
-                    <td>- React (Redux)</td>
+                    <td>• JavaScript (jQuery)</td>
                     <td>
-                      <Logos src={react} alt="REACT Logo"></Logos>
+                      <img className="logos" src={js} alt="JS Logo"></img>
                     </td>
                     <td>
-                      <Logos src={redux} alt="REDUX Logo"></Logos>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>- Node.js (Express)</td>
-                    <td>
-                      <Logos src={nodejs} alt="NODEJS Logo"></Logos>
-                    </td>
-                    <td>
-                      <Logos src={express} alt="EXPRESS Logo"></Logos>
+                      <img
+                        className="logos"
+                        src={jquery}
+                        alt="JQUERY Logo"
+                      ></img>
                     </td>
                   </tr>
                   <tr>
-                    <td>- MongoDB (Mongoose)</td>
+                    <td>• React (Redux)</td>
                     <td>
-                      <Logos src={mongodb} alt="MONGODB Logo"></Logos>
+                      <img className="logos" src={react} alt="REACT Logo"></img>
                     </td>
                     <td>
-                      <Logos src={mongoose} alt="MONGOOSE Logo"></Logos>
+                      <img className="logos" src={redux} alt="REDUX Logo"></img>
                     </td>
                   </tr>
                   <tr>
-                    <td>- Github</td>
+                    <td>• Node.js (Express)</td>
                     <td>
-                      <Logos src={github} alt="GITHUB Logo"></Logos>
+                      <img
+                        className="logos"
+                        src={nodejs}
+                        alt="NODEJS Logo"
+                      ></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={express}
+                        alt="EXPRESS Logo"
+                      ></img>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>• MongoDB (Mongoose)</td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={mongodb}
+                        alt="MONGODB Logo"
+                      ></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={mongoose}
+                        alt="MONGOOSE Logo"
+                      ></img>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>• Github</td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={github}
+                        alt="GITHUB Logo"
+                      ></img>
+                    </td>
+                  </tr>
+                </table>
+                <table className="mt-1 description smSc">
+                  <tr>
+                    <td>
+                      <img className="logos" src={html} alt="HTML Logo"></img>
+                    </td>
+                    <td>
+                      <img className="logos" src={css} alt="CSS Logo"></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={bootstrap}
+                        alt="Bootstrap Logo"
+                      ></img>
+                    </td>
+                    <td>
+                      <img className="logos" src={sass} alt="SASS Logo"></img>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img className="logos" src={js} alt="JS Logo"></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={jquery}
+                        alt="JQUERY Logo"
+                      ></img>
+                    </td>
+
+                    <td>
+                      <img className="logos" src={react} alt="REACT Logo"></img>
+                    </td>
+                    <td>
+                      <img className="logos" src={redux} alt="REDUX Logo"></img>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        className="logos"
+                        src={nodejs}
+                        alt="NODEJS Logo"
+                      ></img>
+                    </td>
+
+                    <td>
+                      <img
+                        className="logos"
+                        src={express}
+                        alt="EXPRESS Logo"
+                      ></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={mongodb}
+                        alt="MONGODB Logo"
+                      ></img>
+                    </td>
+                    <td>
+                      <img
+                        className="logos"
+                        src={mongoose}
+                        alt="MONGOOSE Logo"
+                      ></img>
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td>
+                      <img
+                        className="logos"
+                        src={github}
+                        alt="GITHUB Logo"
+                      ></img>
                     </td>
                   </tr>
                 </table>
               </div>
             </ProfileWrite>
           </Col>
-        </RowWrap>
+        </div>
       </div>
     </div>
   );
 }
-
-const RowWrap = styled.div`
-  border-radius: 15px 50px;
-  margin: 0;
-  align-items: center;
-  @media (max-width: 1400px) {
-    margin-right: 1rem !important;
-  }
-  @media (max-width: 1100px) {
-    margin: 3rem !important;
-  }
-  @media (max-width: 1000px) {
-    margin: 1rem !important;
-  }
-  @media (max-width: 500px) {
-    width: 100%;
-    height: 100%;
-  }
-`;
-const ProfilePhoto = styled.img`
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  box-shadow: 15px 10px 14px #748a8f;
-  border-radius: 50px 1px;
-  transition: filter 0.5s ease-in-out;
-  @media (max-width: 1000px) {
-    height: 300px;
-    
-    margin-bottom: 1rem;
-  }
-  @media (max-width: 500px) {
-    height: 130px;
-  }
-
-  &:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-  }
-`;
-const Sliding = styled.span`
-  display: none;
-  font-size: 1.8rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: bold;
-  @media (max-width: 1100px) {
-    display: block;
-    text-align: center;
-    align-self: center;
-    width: 250px;
-    margin-left: 1rem;
-  }
-  @media (max-width: 500px) {
-    margin: 1rem !important;
-    width: 120px;
-    font-size: 0.8rem;
-  }
-`;
-const Logos = styled.img`
-  max-height: 1.8em;
-  margin: 0.1em 1.5em;
-  @media only screen and (max-width: 560px) {
-    display:none;
-  }
-  }
-`;
 const ProfileWrite = styled.p`
   line-height: 2rem;
   margin-top: 1rem;
   font-family: "Titillium Web", sans-serif;
   font-style: ${props => props.font || "none"};
-`;
-const Hr = styled.hr`
-  border: 0;
-  margin: 0.4rem auto;
-  max-width: 100%;
-  background-position: 50%;
-  box-sizing: border-box;
-  height: auto;
-  color: #2d3436;
-  text-align: center;
-  &:after {
-    content: "★";
-    font-size: 2em;
-    text-shadow: -2em 0, -1em 0, 1em 0, 2em 0;
-    @media (max-width: 1100px) {
-      font-size: 1.2em;
-    }
-  }
-`;
-const Myname = styled.p`
-  font-family: "Pacifico", cursive;
-  font-size: 2.5rem;
-  padding: 2rem;
-  @media (max-width: 1100px) {
-    display: none;
+  @media (max-width: 800px) {
+    margin: 0;
+    line-height: 1.2rem;
   }
 `;
 export default Home;

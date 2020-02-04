@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import xing from "../../assets/social-media/xing.svg";
 import linkedin from "../../assets/social-media/linkedin.svg";
 import github from "../../assets/social-media/github.svg";
-import "./Contact.css";
+import "./contact.styles.scss";
 function Contact() {
   return (
     <div style={{ marginTop: "4rem" }} className="d-flex h-100 contactAll">
@@ -66,14 +65,14 @@ function Contact() {
           </div>
           <div class="form-group">
             <label htmlFor="message">Your Message</label>
-            <input
-              type="text"
+            <textarea
               class="form-control"
               id="message"
+              rows="3"
               placeholder="Your Message"
             />
           </div>
-          <button type="submit" className="btn btn-primary w-100">
+          <button type="submit" className="btn btn-primary w-100 mt-2">
             Submit
           </button>
         </form>

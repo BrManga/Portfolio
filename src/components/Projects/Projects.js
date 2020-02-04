@@ -19,7 +19,7 @@ function Projects() {
         technologyDescription:
           "HTML, CSS, React, Redux, Firebase, React-Stripe, Styled-Components",
         pageURL: "https://toyshop.netlify.com/",
-        codeURL: "https://github.com/BrManga/Toy-Shop"
+        codeURL: "https://github.com/BrManga/Toy-Shop",
       },
       {
         img: img,
@@ -58,7 +58,7 @@ function Projects() {
   ];
   const projects = state.map(project => (
     <>
-      <ProjectLeft {...project[0]} /> <ProjectRight {...project[1]} />
+      <ProjectLeft key={1} {...project[0]} /> <ProjectRight key={2} {...project[1]} />
     </>
   ));
   return (

@@ -47,7 +47,8 @@ const CollapseWrapper = styled(animated.div)`
   width: 100%;
   background: #2d3436;
   position: fixed;
-  top: 4.5rem;
+  top: 4.1rem;
+  ${"" /* Navigation bar ile collapse wrapper arasi mesafe */}
   left: 0;
   right: 0;
   z-index: 11;
