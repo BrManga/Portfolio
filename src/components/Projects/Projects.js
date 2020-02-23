@@ -28,8 +28,8 @@ function Projects() {
           "A guide for visitors of Heinsberg to an easier decision what to do.",
         technologyTitle: "Technologies Used",
         technologyDescription: "HTML, SCSS, React, Mapbox-gl",
-        pageURL: "https://best-beach-resort-hotel.netlify.com/",
-        codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
+        pageURL: "https://heinsberg.netlify.com/",
+        codeURL: "https://github.com/BrManga/Stadt_Heinsberg"
       }
     ],
     [
