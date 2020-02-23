@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect
 } from "react-router-dom";
 import M from "./components/M/M";
 import Home from "./components/Home/Home";
@@ -30,20 +29,20 @@ class App extends Component {
       <>
         <Router>
           <Switch>
-              {this.state.transition ? 
-              (<Route exact path="/" component={M} />) :  
-            ( <>
-              <Navbar
-                navbarState={this.state.navbarOpen}
-                handleNavbar={this.handleNavbar}
-              />
-               
+            {this.state.transition ? (
+              <Route exact path="/" component={M} />
+            ) : (
+              <>
+                <Navbar
+                  navbarState={this.state.navbarOpen}
+                  handleNavbar={this.handleNavbar}
+                />
 
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/projects" component={Projects} />
-              <Route exact path="/contact" component={Contact} />
-              <Redirect to="/home" /> 
-            </>)}
+                <Route exact path="/" component={Home} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/contact" component={Contact} />
+              </>
+            )}
           </Switch>
         </Router>
       </>

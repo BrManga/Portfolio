@@ -82,13 +82,13 @@ function Home() {
 
                 <table className="mt-1 description bigSc ">
                   <tr>
-                    <td>• HTML</td>
+                    <td>HTML</td>
                     <td>
                       <img className="logos" src={html} alt="HTML Logo"></img>
                     </td>
                   </tr>
                   <tr>
-                    <td>• CSS (Bootstrap, SASS)</td>
+                    <td>CSS (Bootstrap, SASS)</td>
                     <td>
                       <img className="logos" src={css} alt="CSS Logo"></img>
                     </td>
@@ -104,7 +104,7 @@ function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td>• JavaScript (jQuery)</td>
+                    <td>JavaScript (jQuery)</td>
                     <td>
                       <img className="logos" src={js} alt="JS Logo"></img>
                     </td>
@@ -117,7 +117,7 @@ function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td>• React (Redux)</td>
+                    <td>React (Redux)</td>
                     <td>
                       <img className="logos" src={react} alt="REACT Logo"></img>
                     </td>
@@ -126,7 +126,7 @@ function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td>• Node.js (Express)</td>
+                    <td>Node.js (Express)</td>
                     <td>
                       <img
                         className="logos"
@@ -143,7 +143,7 @@ function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td>• MongoDB (Mongoose)</td>
+                    <td>MongoDB (Mongoose)</td>
                     <td>
                       <img
                         className="logos"
@@ -160,7 +160,7 @@ function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td>• Github</td>
+                    <td>Github</td>
                     <td>
                       <img
                         className="logos"

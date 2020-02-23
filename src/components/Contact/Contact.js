@@ -1,9 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import xing from "../../assets/social-media/xing.svg";
 import linkedin from "../../assets/social-media/linkedin.svg";
 import github from "../../assets/social-media/github.svg";
 import "./contact.styles.scss";
 function Contact() {
+  const [state, setState] = useState({ name: "", email: "", message: "" });
+  const [emailStatus, setMailStatus] = useState(false);
+  const submitHandler = e => {
+    const { email, name, message } = state;
+    var xhr = new XMLHttpRequest();
+
+    // get a callback when the server responds
+    xhr.addEventListener("load", () => {
+      // update the response state and the step
+      console.log(xhr.responseText);
+
+      setMailStatus(xhr.responseText);
+    });
+    // open the request with the verb and the url
+    xhr.open(
+      "GET",
+      "https://www.boramanga.com/sendemail/index.php?sendto=" +
+        email +
+        "&name=" +
+        name +
+        "&message=" +
+        message
+    );
+    // send the request
+    xhr.send();
+
+    // reset the fields
+    setState({ name: "", email: "", message: "" });
+    e.preventDefault();
+  };
+  const changeHandler = e => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
   return (
     <div style={{ marginTop: "4rem" }} className="d-flex h-100 contactAll">
       <div className="left">
@@ -44,7 +77,7 @@ function Contact() {
       </div>
       <div className="right">
         <h1>CONTACT</h1>
-        <form className="form">
+        <form className="form" onSubmit={submitHandler} id="contactForm">
           <div class="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -52,6 +85,9 @@ function Contact() {
               class="form-control"
               id="name"
               placeholder="Name..."
+              name="name"
+              value={state.name}
+              onChange={changeHandler}
             />
           </div>
           <div class="form-group">
@@ -61,6 +97,9 @@ function Contact() {
               class="form-control"
               id="email"
               placeholder="Email..."
+              name="email"
+              value={state.email}
+              onChange={changeHandler}
             />
           </div>
           <div class="form-group">
@@ -70,11 +109,27 @@ function Contact() {
               id="message"
               rows="3"
               placeholder="Your Message"
+              name="message"
+              value={state.message}
+              onChange={changeHandler}
             />
           </div>
           <button type="submit" className="btn btn-primary w-100 mt-2">
             Submit
           </button>
+          <div>
+            {emailStatus && (
+              <div
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  marginTop: "5px"
+                }}
+              >
+                Thank you for contacting me.
+              </div>
+            )}
+          </div>
         </form>
         <div className="social-media-down">
           <a
