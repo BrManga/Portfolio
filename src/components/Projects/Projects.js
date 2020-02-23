@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/Projects/resorthotel.png";
+import img from "../../assets/Projects/heinsberg.png";
 import img1 from "../../assets/Projects/weatherapp.png";
 import img2 from "../../assets/Projects/toyshop.png";
 import img3 from "../../assets/Projects/readinglist1.png";
@@ -19,15 +19,15 @@ function Projects() {
         technologyDescription:
           "HTML, CSS, React, Redux, Firebase, React-Stripe, Styled-Components",
         pageURL: "https://toyshop.netlify.com/",
-        codeURL: "https://github.com/BrManga/Toy-Shop",
+        codeURL: "https://github.com/BrManga/Toy-Shop"
       },
       {
         img: img,
-        pageTitle: "Luxurious Rooms",
+        pageTitle: "Heinsberg",
         pageDescription:
-          "A hotel reservation project made for the learning purposes",
+          "A guide for visitors of Heinsberg to an easier decision what to do.",
         technologyTitle: "Technologies Used",
-        technologyDescription: "React, Redux, Bootstrap bla bla bla bla bla",
+        technologyDescription: "HTML, SCSS, React, Mapbox-gl",
         pageURL: "https://best-beach-resort-hotel.netlify.com/",
         codeURL: "https://github.com/BrManga/Resort_Hotel_MERN_Project"
       }
@@ -58,7 +58,8 @@ function Projects() {
   ];
   const projects = state.map(project => (
     <>
-      <ProjectLeft key={1} {...project[0]} /> <ProjectRight key={2} {...project[1]} />
+      <ProjectLeft key={1} {...project[0]} />{" "}
+      <ProjectRight key={2} {...project[1]} />
     </>
   ));
   return (
