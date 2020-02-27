@@ -20,7 +20,7 @@ const Navbar = props => {
   });
 
   return (
-    <>
+    <div>
       <NavBar style={barAnimation}>
         <FlexContainer>
           <Brand></Brand>
@@ -41,7 +41,7 @@ const Navbar = props => {
         navbarState={props.navbarState}
         handleNavbar={props.handleNavbar}
       />
-    </>
+    </div>
   );
 };
 
