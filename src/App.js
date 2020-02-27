@@ -32,7 +32,7 @@ class App extends Component {
             {this.state.transition ? (
               <Route exact path="/" component={M} />
             ) : (
-              <>
+              <div>
                 <Navbar
                   navbarState={this.state.navbarOpen}
                   handleNavbar={this.handleNavbar}
@@ -41,7 +41,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/projects" component={Projects} />
                 <Route exact path="/contact" component={Contact} />
-              </>
+              </div>
             )}
           </Switch>
         </Router>
