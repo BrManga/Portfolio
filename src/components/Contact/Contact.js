@@ -100,6 +100,7 @@ function Contact() {
               name="email"
               value={state.email}
               onChange={changeHandler}
+              required
             />
           </div>
           <div class="form-group">
@@ -112,6 +113,7 @@ function Contact() {
               name="message"
               value={state.message}
               onChange={changeHandler}
+              required
             />
           </div>
           <button type="submit" className="btn btn-primary w-100 mt-2">

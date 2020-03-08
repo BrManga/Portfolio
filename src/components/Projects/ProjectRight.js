@@ -3,7 +3,6 @@ import { Col, Card } from "react-bootstrap";
 import "./projects.style.scss";
 
 function ProjectRight(props) {
-  console.log(props);
   const {
     img,
     pageTitle,

@@ -3,7 +3,6 @@ import { Col, Card } from "react-bootstrap";
 import "./projects.style.scss";
 
 function ProjectLeft(props) {
-  console.log(props);
   const {
     img,
     pageTitle,
